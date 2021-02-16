@@ -58,36 +58,37 @@ const Figma = () => {
     setParaColor(e.target.value);
   };
   const paraFontIncrease = () => {
-    setparaFont(paraFont => paraFont +1)
+    setparaFont((paraFont) => paraFont + 1);
   };
   const paraFontDecrease = () => {
-    if(paraFont ===1)
-    {
-      setparaFont(1)
-    }
-    else
-    {
-      
-    setparaFont(paraFont => paraFont -1)
+    if (paraFont === 1) {
+      setparaFont(1);
+    } else {
+      setparaFont((paraFont) => paraFont - 1);
     }
   };
-
+  const borderColorChange = (e) => {
+    setBorderColor(e.target.value)
+  }
 
   return (
     <div className="figma-body">
       <h2>Style as you want</h2>
       <div className="figma-style">
         <div className="border-style">
-          <span>
+          <div>
             Border: <button onClick={increaseBorder}>Increase</button>
             <button onClick={decreaseBorder}>Decrease</button>{" "}
-          </span>
-          <br />
-          <span>
+          </div>
+          <div>
             Border-radius:<strong>{` ${borderRadius}px `}</strong>
             <button onClick={increaseBorderRadius}>Increase</button>
             <button onClick={decreaseBorderRadius}>Decrease</button>
-          </span>
+          </div>
+          <div>
+            Border-color: <input type="color" onChange={borderColorChange}/>
+
+          </div>
         </div>
         <div className="padding-style">
           Padding:<strong>{` ${padding}rem `}</strong>
@@ -95,7 +96,7 @@ const Figma = () => {
             <button onClick={increasePadding}>Increase</button>
           </span>
           <span>
-            <button onClick={decreasePadding}>Dncrease</button>
+            <button onClick={decreasePadding}>Decrease</button>
           </span>
         </div>
         <div className="background-style">
@@ -125,13 +126,13 @@ const Figma = () => {
         </div>
         <div className="para-style">
           ParagraphColor: <input type="color" onChange={paraColorChange} />
-          Paragraph text-size: {` ${paraFont}px `}{" "}
+          {" "}Paragraph text-size: {` ${paraFont}px `}{" "}
           <button onClick={paraFontIncrease}>Increase</button>
           {` `} <button onClick={paraFontDecrease}>Decrease</button>
         </div>
       </div>
       <div
-        class="figma-change-box"
+        className="figma-change-box"
         style={{
           backgroundColor: `${background}`,
           border: `${borderThick}px solid ${borderColor}`,
