@@ -1,10 +1,22 @@
 .App {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
 }
 
-.figma-change-box
-{
-margin: 0 auto;
-width: 600px;
+.figma-body h2 {
+  font-weight: lighter;
+  letter-spacing: 3px;
+}
+
+.figma-body .figma-style {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  gap: 1rem;
+  column-rule: 1px solid black;
+}
+
+.figma-change-box {
+  margin: 2rem auto;
+  width: 600px;
 }
