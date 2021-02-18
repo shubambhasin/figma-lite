@@ -73,6 +73,8 @@ const Figma = () => {
 
   return (
     <div className="figma-body">
+              <h1>Figma Lite</h1>
+
       <h2>Style as you want</h2>
       <div className="figma-style">
         <div className="border-style">
