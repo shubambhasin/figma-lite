@@ -108,3 +108,23 @@ li:hover {
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
+
+.items-available
+{
+  display: flex;
+}
+
+.like
+{
+display: grid;
+place-items: center;
+font-size: large;
+}
+
+
+.like button
+{
+  font-size: large;
+  background:rgba(255, 255, 255, 0.268);
+  border: 1px solid black;
+}
